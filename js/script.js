@@ -1,9 +1,19 @@
-"use strict";
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const obj = {
-    name: "John",
-    age: 25,
-    isMarried: true
+const personalMovieDb = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-console.log(obj.age);
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', ''),
+        c = prompt('Один из последних просмотренных фильмов?', ''),
+        d = prompt('На сколько оцените его?', '');
+
+personalMovieDb.movies[a] = b;
+personalMovieDb.movies[c] = d;
+
+console.log(personalMovieDb);
